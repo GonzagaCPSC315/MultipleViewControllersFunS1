@@ -21,11 +21,11 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VYE-rK-0kc">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUa-wv-Jm3">
                                         <rect key="frame" x="0.0" y="44" width="382" height="30"/>
-                                        <state key="normal" title="Login"/>
+                                        <state key="normal" title="Log In"/>
                                         <connections>
                                             <segue destination="EAl-Sb-KLf" kind="show" identifier="automaticSegue" id="hbu-Fg-CDn"/>
                                         </connections>
@@ -68,7 +68,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdo-Yi-9X4">
                                         <rect key="frame" x="0.0" y="36.5" width="382" height="30"/>
-                                        <state key="normal" title="Logout"/>
+                                        <state key="normal" title="Log Out"/>
                                         <connections>
                                             <segue destination="ua4-oh-ozw" kind="unwind" unwindAction="unwindToInitialVCWithSegue:" id="y9J-is-QWt"/>
                                         </connections>
