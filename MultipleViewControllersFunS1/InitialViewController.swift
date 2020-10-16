@@ -8,11 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class InitialViewController: UIViewController {
+    @IBOutlet var usernameTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func unwindToInitialVC(segue: UIStoryboardSegue) {
+        print("unwinding to initial view controller")
     }
 
 
