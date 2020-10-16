@@ -27,7 +27,7 @@
                                         <rect key="frame" x="0.0" y="44" width="382" height="30"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
-                                            <segue destination="EAl-Sb-KLf" kind="show" id="hbu-Fg-CDn"/>
+                                            <segue destination="EAl-Sb-KLf" kind="show" identifier="automaticSegue" id="hbu-Fg-CDn"/>
                                         </connections>
                                     </button>
                                 </subviews>
