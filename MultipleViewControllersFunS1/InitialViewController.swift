@@ -43,7 +43,7 @@ class InitialViewController: UIViewController {
         // destination: this is the new view controller
         // identifier: this is the string you may have setup in IB
         if let identifier = segue.identifier {
-            if identifier == "automaticSegue" {
+            if identifier == "automaticSegue" || identifier == "manualSegue" {
                 // we want to downcast the segue.destination reference from a general UIViewController to a SecondViewController
                 if let secondVC = segue.destination as? SecondViewController {
                     // task: set a property in secondVC to store the incoming username string from the username text field
@@ -52,6 +52,13 @@ class InitialViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    @IBAction func manualSegueButtonPressed(_ sender: UIButton) {
+        print("performing manual segue")
+        
+        // trigger the "manualSegue" segue
+        performSegue(withIdentifier: "manualSegue", sender: self)
     }
 
 }

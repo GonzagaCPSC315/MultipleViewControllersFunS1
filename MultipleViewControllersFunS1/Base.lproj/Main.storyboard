@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ogA-hC-PAS">
-                                <rect key="frame" x="16" y="411" width="382" height="74"/>
+                                <rect key="frame" x="16" y="391" width="382" height="114"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VYE-rK-0kc">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
@@ -28,6 +28,13 @@
                                         <state key="normal" title="Log In"/>
                                         <connections>
                                             <segue destination="EAl-Sb-KLf" kind="show" identifier="automaticSegue" id="hbu-Fg-CDn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BX8-hB-LzZ">
+                                        <rect key="frame" x="0.0" y="84" width="382" height="30"/>
+                                        <state key="normal" title="Manual Segue Log In"/>
+                                        <connections>
+                                            <action selector="manualSegueButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hPd-MM-603"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -43,6 +50,7 @@
                     </view>
                     <connections>
                         <outlet property="usernameTextField" destination="VYE-rK-0kc" id="Zw3-I7-IwE"/>
+                        <segue destination="EAl-Sb-KLf" kind="show" identifier="manualSegue" id="jXp-B3-9Eo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -95,4 +103,7 @@
             <point key="canvasLocation" x="991" y="133"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="jXp-B3-9Eo"/>
+    </inferredMetricsTieBreakers>
 </document>
