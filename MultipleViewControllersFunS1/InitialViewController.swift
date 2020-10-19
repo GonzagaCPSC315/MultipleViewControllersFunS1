@@ -60,6 +60,18 @@ class InitialViewController: UIViewController {
         // trigger the "manualSegue" segue
         performSegue(withIdentifier: "manualSegue", sender: self)
     }
+    
+    // one more segue method to show you
+    // only called for automatic segues
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        // an opportunity to stop an automatic segue from happening
+        // perhaps we should validate the users credentials
+        // return true if they are good
+        // false otherwise
+        // TODO: check the user actually entered in a username
+        
+        return true
+    }
 
 }
 
