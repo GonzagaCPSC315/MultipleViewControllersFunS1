@@ -18,7 +18,12 @@ import UIKit
 // 1. automatic (let IB handle)
 // 2. manual (we can trigger the segue in our Swift code)
 
-
+// MARK: - Navigation and Tab Bar Controllers
+// we learned to set up segues manually, which is great
+// for common workflows, iOS provides some standard controllers we can use
+// example: when you click on an item in a list of items, you go to a second screen and see a detail view for that item
+// 1. Navigation controllers: great for drill-down interfaces (e.g. hierarchical relationship amongst your screens)
+// 2. Tab bar controller: great for flat interfaces (e.g. independent screens)
 
 class InitialViewController: UIViewController {
     @IBOutlet var usernameTextField: UITextField!
@@ -69,7 +74,9 @@ class InitialViewController: UIViewController {
         // return true if they are good
         // false otherwise
         // TODO: check the user actually entered in a username
-        
+        guard let username = usernameTextField.text, username != "" else {
+            return false // they didn't enter a username
+        }
         return true
     }
 
